@@ -19,7 +19,7 @@ const options = {
 	const response = await fetch(url, options);
 	const data =await response.json();
     var main = document.getElementById('main')
-    main.innerHTML = ` <div class="flex flex-col bg-white rounded p-4 w-full max-w-xs">
+    main.innerHTML = ` <div class="flex flex-col bg-violet-50 rounded p-4 w-full max-w-xs">
     <div class="font-bold text-xl">${data.location.name}-${data.location.region}-${data.location.country}</div>
     <div class="text-sm text-gray-500">${data.location.localtime}</div>
     <div class="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">
