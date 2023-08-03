@@ -64,4 +64,3 @@ function getLocation() {
   api(position.coords.latitude +","+ position.coords.longitude);
   }
 
-// https://weatherapi-com.p.rapidapi.com/current.json?q=surat&X-RapidAPI-Key=9d2ba4e13emshddd27fd39badc56p1541a8jsn000523fa9e91&X-RapidAPI-Host=weatherapi-com.p.rapidapi.com
