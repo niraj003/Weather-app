@@ -48,10 +48,11 @@ const options = {
         </div>
     </div>
 </div>`;
-	console.log(result['current']['temp_c']);
+	// console.log(result['current']['temp_c']);
     
 
     Notification.requestPermission().then(perm=>{
+        console.log(perm);
         if(perm === "granted"){ 
         const notification = new Notification(
             "Today Weather" ,{
