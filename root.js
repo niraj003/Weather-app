@@ -18,6 +18,7 @@ const options = {
 
 	const response = await fetch(url, options);
 	const data =await response.json();
+  
     var main = document.getElementById('main')
     main.innerHTML = ` <div class="flex flex-col bg-violet-50 rounded p-4 w-full max-w-xs">
     <div class="font-bold text-xl">${data.location.name}-${data.location.region}-${data.location.country}</div>
@@ -48,6 +49,18 @@ const options = {
     </div>
 </div>`;
 	console.log(result['current']['temp_c']);
+    
+
+    Notification.requestPermission().then(perm=>{
+        if(perm === "granted"){ 
+        const notification = new Notification(
+            "Today Weather" ,{
+                body: `${data.location.name} Temperature ${data.current.temp_c}°`,
+                icon: 'main.png',
+            }
+        )
+    }
+     });
    
 }
 getLocation();
